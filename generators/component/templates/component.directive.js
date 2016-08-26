@@ -1,9 +1,7 @@
 (function() {
   'use strict';
 
-  angular
-    .module('<%= appName %>')
-    .directive('<%= directiveName %>', <%= directiveName %>);
+  app.directive('<%= directiveName %>', <%= directiveName %>);
 
   /** @ngInject */
   function <%= directiveName %>() {
