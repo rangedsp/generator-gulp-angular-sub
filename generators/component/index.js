@@ -18,7 +18,7 @@ module.exports = yeoman.generators.Base.extend({
   },
   initializing: function () {
     // welcome message.
-    this._welcome();
+    // this._welcome();
     // angularjs app name
     this.appName = require(this.destinationRoot() + '/package.json').name;
   },
@@ -52,6 +52,7 @@ module.exports = yeoman.generators.Base.extend({
     var data = {
       appName: this.appName,
       controlerName: _.capitalize(this.props.viewName + 'Controller'),
+      className: _.kebabCase(componentName),
       directiveName: componentName,
       templateUrl: 'app/components/' + componentName + '/' + componentName + '.html',
       directiveLink: componentName + 'Link',
